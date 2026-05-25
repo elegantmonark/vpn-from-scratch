@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+.env
+.venv/
+venv/
+env/
+
+# Local runtime configuration and private keys
+config/server.key
+config/server.json
+config/servers.json
+
+# Download from https://www.wintun.net/ instead of committing vendor binaries
+wintun/*.dll
+
+# Build/cache artifacts
+build/
+dist/
+*.log
+
+# OS/editor metadata
+.DS_Store
+Thumbs.db
+desktop.ini

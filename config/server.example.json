@@ -1,0 +1,7 @@
+{
+  "name": "Local VPN Server",
+  "listen_port": 51820,
+  "handshake_port": 51821,
+  "tun_name": "VPNServer",
+  "public_key": "replace_with_server_public_key_hex"
+}

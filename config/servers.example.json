@@ -1,0 +1,13 @@
+{
+  "servers": [
+    {
+      "name": "Local Test Server",
+      "host": "127.0.0.1",
+      "port": 51820,
+      "handshake_port": 51821,
+      "pubkey": "replace_with_server_public_key_hex",
+      "region": "LOCAL",
+      "allow_insecure": true
+    }
+  ]
+}
