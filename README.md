@@ -251,4 +251,4 @@ This project is for educational use only. Do not use it as a real privacy, secur
 
 ## License
 
-MIT
+Apache License 2.0. See [LICENSE](LICENSE).
