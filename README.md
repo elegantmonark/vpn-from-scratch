@@ -10,6 +10,17 @@
 
 > **Status:** research and learning prototype. This is not a production VPN, privacy product, or anonymity tool.
 
+## At A Glance
+
+| Area | Details |
+| --- | --- |
+| Focus | VPN architecture, virtual interfaces, encrypted tunnels, routing, applied crypto |
+| Client | Python client path with Wintun-oriented interface code and Tkinter UI |
+| Server | Python server path with TUN/Wintun concepts and NAT/routing hooks |
+| Session setup | TCP handshake with X25519 public keys, HKDF salt, timestamp, and encrypted confirmation |
+| Packet transport | UDP tunnel carrying AES-256-GCM encrypted packets |
+| Security stance | Educational prototype with explicit non-production boundary |
+
 ## Overview
 
 VPN From Scratch explores how a VPN works internally by implementing the core pieces directly in Python instead of wrapping an existing VPN framework. The project creates virtual network interfaces, performs session setup, derives encryption keys, encrypts tunnel packets, and transports them over UDP between a client and server.
@@ -21,6 +32,14 @@ The goal is to make VPN architecture understandable at the systems level: virtua
 Most VPNs hide the interesting engineering behind polished clients and production infrastructure. This project exposes the machinery: how packets enter a virtual interface, how a secure session is negotiated, how tunnel traffic is encrypted, and how the server receives and forwards traffic.
 
 It is useful as a systems/security project because it connects networking, applied cryptography, OS interfaces, and routing into one working prototype.
+
+## What This Demonstrates
+
+- virtual network interface design using TUN/Wintun concepts
+- encrypted packet tunnelling over UDP
+- session establishment with asymmetric key agreement and derived symmetric keys
+- server identity checks through public-key pinning
+- practical boundary-setting between educational security code and production security software
 
 ## Capability Snapshot
 
@@ -220,6 +239,8 @@ For real-world VPN use, use a mature and reviewed implementation such as WireGua
 - Improve multi-client server handling
 - Add a stronger kill-switch design
 - Add UI screenshots and packet-flow diagrams
+- Add packet trace logging for controlled lab debugging
+- Add a minimal Linux-first setup path once routing/NAT behaviour is stable
 - Package the repo as a clean educational systems lab
 
 ## License
