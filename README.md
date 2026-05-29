@@ -243,6 +243,10 @@ For real-world VPN use, use a mature and reviewed implementation such as WireGua
 - Add a minimal Linux-first setup path once routing/NAT behaviour is stable
 - Package the repo as a clean educational systems lab
 
+## Current Focus
+
+VPN From Scratch is the public systems/networking repo. The next useful step is to keep hardening the lab infrastructure around the tunnel: replay-window design, structured packet tracing, safer route setup/teardown, and clearer Linux-first validation once the platform-specific networking behaviour is stable.
+
 ## License
 
 Apache License 2.0. See [LICENSE](LICENSE).
